@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Clínica Veterinária</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f7f7f7;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    form {
+      background: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+
+    input, button {
+      display: block;
+      margin: 8px 0;
+      padding: 8px;
+      width: 100%;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background: #fff;
+      margin: 8px 0;
+      padding: 10px;
+      border-radius: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    li button {
+      margin-left: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Animais da Clínica</h1>
+
+  <!-- Formulário de cadastro/edição -->
+  <form id="form-animal">
+    <input type="hidden" id="animal-id" name="id">
+    <input type="text" name="nome" placeholder="Nome" required>
+    <input type="text" name="especie" placeholder="Espécie" required>
+    <input type="text" name="raca" placeholder="Raça" required>
+    <input type="number" name="idade" placeholder="Idade" required>
+    <input type="number" name="tutor_id" placeholder="ID do Tutor" required>
+    <button type="submit" id="btn-submit">Cadastrar</button>
+  </form>
+
+  <!-- Lista de animais -->
+  <ul id="lista-animais"></ul>
+
+  <script src="app.js"></script>
+</body>
+</html>
