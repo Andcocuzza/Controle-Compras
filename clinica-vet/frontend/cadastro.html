@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de Animais</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Cadastro de Animais</h1>
+    <p><button onclick="window.location.href='index.html'">← Voltar</button></p>
+  </header>
+
+  <main>
+    <form id="form-animal">
+      <input type="hidden" id="animal-id" name="id">
+      <input type="text" name="nome" placeholder="Nome do Animal" required>
+      <input type="text" name="especie" placeholder="Espécie" required>
+      <input type="text" name="raca" placeholder="Raça" required>
+      <input type="number" name="idade" placeholder="Idade" required>
+      <input type="text" name="tutor" placeholder="Nome do Tutor" required>
+      <button type="submit" id="btn-submit">Cadastrar</button>
+    </form>
+
+    <h2>Animais Cadastrados</h2>
+    <ul id="lista-animais"></ul>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

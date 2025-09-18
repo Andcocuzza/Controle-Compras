@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Consultas e Vacinas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Consultas e Vacinas</h1>
+    <button onclick="window.location.href='index.html'">← Voltar</button>
+  </header>
+
+  <main>
+    <!-- Formulário de Cadastro -->
+    <section>
+      <h2>Cadastrar Consultas</h2>
+      <form id="form-consulta">
+        <label for="animal">Animal:</label>
+        <input type="text" id="animal" name="animal" required>
+
+        <label for="tutor">Tutor:</label>
+        <input type="text" id="tutor" name="tutor" required>
+
+        <label for="servico">Serviço:</label>
+        <input type="text" id="servico" name="servico" required>
+
+        <label for="data">Data:</label>
+        <input type="date" id="data" name="data" required>
+
+        <button type="submit">Cadastrar</button>
+      </form>
+    </section>
+
+    <hr>
+
+    <!-- Lista de Consultas -->
+    <section>
+      <h2>Consultas Registradas</h2>
+      <table id="tabela-consultas">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Animal</th>
+            <th>Tutor</th>
+            <th>Serviço</th>
+            <th>Data</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Preenchido pelo JS -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="consulta.js"></script>
+</body>
+</html>
