@@ -1,0 +1,167 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 6px;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+  font-size: 14px;
+}
+h1, h2, h3, h4 {
+  margin: 6px 0 4px;
+  font-weight: normal;
+}
+label {
+  font-weight: 600;
+  font-size: 13px;
+}
+.linha-campos {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.campo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.campo input,
+.campo select {
+  padding: 6px 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 100%;
+}
+button {
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1em;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover, button:focus {
+  background-color: #0056b3;
+  outline: none;
+}
+#listaCompras ul {
+  padding-left: 18px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+#listaCompras li {
+  margin-bottom: 7px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#listaCompras button {
+  background-color: #dc3545;
+  font-size: 0.85em;
+  padding: 4px 8px;
+  width: auto;
+  border-radius: 5px;
+  margin-left: 8px;
+}
+#listaCompras button:hover, #listaCompras button:focus {
+  background-color: #a71d2a;
+}
+hr {
+  margin: 15px 0;
+  border: none;
+  border-top: 1px solid #bbb;
+}
+/* Fundo com verde suave */
+body {
+  background: #d7f0dc; /* Verde clarinho */
+  color: #051806; /* Verde escuro para texto */
+}
+
+/* Títulos em vermelho forte */
+h1, h2, h3, h4 {
+  color: #b22222; /* Vermelho fechado */
+}
+
+/* Labels em verde */
+label {
+  color: #007a33; /* Verde vibrante */
+}
+
+/* Botões em vermelho */
+button {
+  background-color: #ee302f; /* Vermelho bandeira */
+  color: white;
+}
+button:hover, button:focus {
+  background-color: #b22222;
+}
+
+/* Itens da lista com amarelo claro */
+#listaCompras li {
+  background-color: #fff8b0; /* Amarelo suave */
+  border-radius: 6px;
+  padding: 6px 10px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Botão remover em verde escuro */
+#listaCompras button {
+  background-color: #004d27;
+}
+#listaCompras button:hover, #listaCompras button:focus {
+  background-color: #002b14;
+}
+
+/* Layout compacto e responsivo */
+.linha-campos {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.campo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.campo input,
+.campo select {
+  padding: 6px 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 100%;
+}
+button {
+  margin-top: 10px;
+  font-size: 1em;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#listaCompras ul {
+  padding-left: 18px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+#listaCompras li {
+  margin-bottom: 7px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+hr {
+  margin: 15px 0;
+  border: none;
+  border-top: 1px solid #bbb;
+}
