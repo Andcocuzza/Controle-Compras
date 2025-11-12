@@ -1,0 +1,150 @@
+body {
+  font-family: Arial, sans-serif;
+   background: linear-gradient(135deg, #73b58b, #ffe680, #f08c82);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  padding: 25px;
+}
+
+h1 {
+  text-align: center;
+ color: #f7150d;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+h2 {
+  color: #2e7d32;
+  margin-top: 40px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.linha-campos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 250px;
+}
+
+.campo label {
+  font-weight: bold;
+  color: #2e7d32;
+  margin-bottom: 4px;
+}
+
+input, textarea, button, select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #f7150d;
+  font-size: 14px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 40px;
+}
+
+.botoes {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+button {
+  background-color: #f7150d;
+  color: rgb(243, 246, 247);
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #0e0d0d;
+}
+
+.btn-cancelar {
+  background-color: #f7150d;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  margin-top: 10px;
+}
+
+th {
+  background-color: #2e7d32;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+}
+
+td {
+  border-bottom: 1px solid #f7150d;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #050505;
+}
+
+tfoot {
+  background-color: #ffe680;
+  color: #0a0a0a;
+  font-weight: bold;
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+}
+
+tfoot td {
+  padding: 10px;
+  border-top: 2px solid #f7150d;
+}
+
+.btn-remover {
+  background-color: #f7150d;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  color: white;
+  transition: 0.3s;
+}
+
+.btn-remover:hover {
+  background-color: #360ec7;
+}
