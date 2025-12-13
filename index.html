@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Controle de Compras - RS</title>
+  <link rel="stylesheet" href="estilo.css" />
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#2e7d32">
+
+</head>
+<body>
+  <div class="container">
+
+    <h1>🛒 Controle de Compras </h1>
+
+    <div class="linha-campos">
+  <div class="campo">
+    <label for="limite">Limite de Compras (R$):</label>
+    <input type="number" id="limite" step="0.01" min="0" placeholder="Ex: 1000">
+  </div>
+</div>
+
+<p id="avisoLimite" style="text-align:center; font-weight:bold;"></p>
+
+    <form id="formCompras">
+      <div class="linha-campos">
+        <div class="campo">
+          <label for="produto">Produto:</label>
+          <input type="text" id="produto" required autocomplete="off" />
+        </div>
+
+        <div class="campo">
+          <label for="marca">Marca:</label>
+          <input type="text" id="marca" autocomplete="off" />
+        </div>
+      </div>
+
+      <div class="linha-campos">
+        <div class="campo">
+          <label for="quantidade">Quantidade:</label>
+          <input type="number" id="quantidade" min="1" value="1" required />
+        </div>
+
+        <div class="campo">
+          <label for="preco">Preço Unitário (R$):</label>
+          <input type="number" id="preco" step="0.01" min="0" required />
+        </div>
+      </div>
+
+      <div class="linha-campos">
+        <div class="campo">
+          <label for="local">Local:</label>
+          <select id="local">
+            <option value="Cozinha">Cozinha</option>
+            <option value="Limpeza">Limpeza</option>
+            <option value="Banheiro">Banheiro</option>
+            <option value="Sala">Sala</option>
+            <option value="Quarto">Quarto</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="data">Data da compra:</label>
+          <input type="date" id="data" />
+        </div>
+      </div>
+
+      <div class="campo campo-texto">
+        <label for="observacoes">Observações:</label>
+        <textarea id="observacoes" placeholder="Ex: Promoção, marca diferente, etc."></textarea>
+      </div>
+
+      <div class="botoes">
+        <button id="btnAdicionar" class="btn-adicionar">Adicionar Compra</button>
+        <button id="btnCancelar" class="btn-cancelar" type="button">Cancelar</button>
+      </div>
+    </form>
+
+    <h2>📋 Lista de Compras</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Produto</th>
+          <th>Marca</th>
+          <th>Qtd</th>
+          <th>Preço Unit.</th>
+          <th>Total</th>
+          <th>Local</th>
+          <th>Data</th>
+          <th>Observações</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="corpoTabela"></tbody>
+      <tfoot>
+        <tr>
+          <td colspan="8" style="text-align: right;"><strong>Total do Mês:</strong></td>
+          <td id="totalMes">R$ 0,00</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
