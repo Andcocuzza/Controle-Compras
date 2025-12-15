@@ -1,8 +1,12 @@
 {
+  "id": "/Controle-Compras/",
   "name": "Controle de Compras RS",
   "short_name": "Compras RS",
-  "start_url": "index.html",
+  "description": "Aplicativo para controle e comparação de compras mês a mês.",
+  "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#ffffff",
   "theme_color": "#2e7d32",
   "icons": [
