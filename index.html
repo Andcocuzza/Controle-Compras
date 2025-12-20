@@ -4,25 +4,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Controle de Compras - RS</title>
+
   <link rel="stylesheet" href="estilo.css" />
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#2e7d32">
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#2e7d32" />
 </head>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <body>
   <div class="container">
 
     <h1>🛒 Controle de Compras</h1>
 
+    <!-- ===== TOPO ===== -->
     <div class="linha-campos">
+
       <div class="campo">
-        <label for="limite">Limite de Compras (R$):</label>
-        <input type="number" id="limite" step="0.01" min="0" placeholder="Ex: 1000">
+        <label for="mesSelecionado">Mês de referência:</label>
+        <input type="month" id="mesSelecionado" />
       </div>
+
+      <div class="campo">
+        <label for="limite">Limite de compras (R$):</label>
+        <input type="number" id="limite" step="0.01" min="0" placeholder="Ex: 1000" />
+      </div>
+
     </div>
 
     <p id="avisoLimite" style="text-align:center; font-weight:bold;"></p>
 
+    <!-- ===== FORMULÁRIO ===== -->
     <form id="formCompras">
 
       <div class="linha-campos">
@@ -46,6 +58,12 @@
         <div class="campo">
           <label for="preco">Preço Unitário (R$):</label>
           <input type="number" id="preco" step="0.01" min="0" required />
+        
+          <p id="totalDia" class="total-dia"></p>
+
+
+          <!-- 👉 PREÇO DO MÊS ANTERIOR -->
+          <small id="precoAnterior" style="display:none; margin-top:4px; font-weight:bold;"></small>
         </div>
       </div>
 
@@ -67,21 +85,21 @@
         </div>
       </div>
 
-      <div class="campo campo-texto">
+      <div class="campo">
         <label for="observacoes">Observações:</label>
-        <textarea id="observacoes" placeholder="Ex: Promoção, marca diferente, etc."></textarea>
+        <textarea id="observacoes" placeholder="Ex: promoção, marca diferente, atacado..."></textarea>
       </div>
 
       <div class="botoes">
-        <button id="btnAdicionar" class="btn-adicionar">Adicionar Compra</button>
-        <button id="btnCancelar" class="btn-cancelar" type="button">Cancelar</button>
+        <button type="submit">Adicionar Compra</button>
+        <button type="button" id="btnCancelar" class="btn-cancelar">Cancelar</button>
       </div>
 
     </form>
 
+    <!-- ===== LISTA ===== -->
     <h2>📋 Lista de Compras</h2>
 
-    <!-- TABELA RESPONSIVA -->
     <div class="tabela-container">
       <table>
         <thead>
@@ -102,13 +120,33 @@
 
         <tfoot>
           <tr>
-            <td colspan="8" style="text-align: right;">
-              <strong>Total do Mês:</strong>
-            </td>
+            <td colspan="8" style="text-align:right;"><strong>Total do dia:</strong></td>
+              <td id="totalDiaTabela">R$ 0,00</td>
+          </tr>
+          <tr>
+            <td colspan="8" style="text-align:right;"><strong>Total do mês:</strong></td>
             <td id="totalMes">R$ 0,00</td>
           </tr>
         </tfoot>
       </table>
+    </div>
+    
+   <!-- <h2>📊 Gráfico de Preço por Produto</h2>
+
+<div class="linha-campos">
+  <div class="campo">
+    <label for="produtoGrafico">Selecione o produto:</label>
+    <select id="produtoGrafico">
+      <option value="">-- Escolha --</option>
+    </select>
+  </div>
+</div>
+
+<canvas id="graficoProduto" height="120"></canvas>
+-->
+    <!-- ===== EXPORTAÇÃO ===== -->
+    <div class="botoes" style="margin-top: 20px;">
+      <button id="btnExportar" type="button">📤 Exportar para Excel / Google Sheets</button>
     </div>
 
   </div>

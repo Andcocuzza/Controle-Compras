@@ -224,3 +224,136 @@ tfoot td {
     font-size: 14px;
   }
 }
+.preco-subiu {
+  background-color: #ffcccc;
+  color: #a00000;
+  font-weight: bold;
+}
+
+.preco-caiu {
+  background-color: #ccffcc;
+  color: #006400;
+  font-weight: bold;
+}
+
+.preco-igual {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* ================= MOBILE FIRST ================= */
+
+.mobile-only {
+  display: none;
+}
+
+.desktop-only {
+  display: block;
+}
+
+/* ===== FORM MOBILE ===== */
+@media (max-width: 768px) {
+
+  body {
+    background: #f5f5f5;
+  }
+
+  .container {
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+    padding: 12px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+  }
+
+  form {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .campo label {
+    font-size: 14px;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  .botoes {
+    gap: 12px;
+  }
+
+  button {
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+
+  /* ===== TABELA → CARDS ===== */
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  #listaMobile {
+    margin-top: 20px;
+  }
+
+  .card-compra {
+    background: #fff;
+    border-radius: 14px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+  }
+
+  .card-compra h3 {
+    margin: 0 0 8px;
+    color: #2e7d32;
+    font-size: 18px;
+  }
+
+  .card-compra p {
+    margin: 4px 0;
+    font-size: 15px;
+  }
+
+  .card-compra strong {
+    color: #000;
+  }
+
+  .card-acoes {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .card-acoes button {
+    width: 48%;
+  }
+
+  /* ===== GRÁFICO ===== */
+  .grafico-container {
+    background: #fff;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 14px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+  }
+
+  canvas {
+    max-width: 100%;
+  }
+}
